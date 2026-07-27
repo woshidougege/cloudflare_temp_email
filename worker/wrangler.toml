@@ -7,6 +7,11 @@ routes = [
   { pattern = "lixuanmail.com", custom_domain = true },
 ]
 
+[assets]
+directory = "../frontend/dist/"
+binding = "ASSETS"
+run_worker_first = true
+
 [vars]
 PREFIX = ""
 DOMAINS = ["lixuanmail.com"]
