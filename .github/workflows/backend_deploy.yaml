@@ -5,6 +5,8 @@ on:
     workflows: [Upstream Sync]
     types: [terminé]
   push:
+    branches:
+      - main
     tags:
       - "*"
   workflow_dispatch:
@@ -48,11 +50,11 @@ jobs:
             cd ..
           fi
 
-          export debug_mode=${{ secrets.DEBUG_MODE }}
+          export debug_mode=true
           export use_mail_wasm_parser=${{ secrets.BACKEND_USE_MAIL_WASM_PARSER }}
           
           cd worker/
-          echo "Using committed wrangler.toml"
+          echo "Using committed wrangler.toml:"
           cat wrangler.toml
           
           pnpm install --no-frozen-lockfile
