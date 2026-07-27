@@ -9,9 +9,9 @@ routes = [
 
 [vars]
 PREFIX = ""
-DOMAINS = ["tencentmail.icu"]
+DOMAINS = '["tencentmail.icu"]'
 JWT_SECRET = "8f2a9c4e1b7d3f6a0e5c8b2d4f9a1e3c"
-ADMIN_PASSWORDS = ["admin123456"]
+ADMIN_PASSWORDS = '["admin123456"]'
 ENABLE_USER_CREATE_EMAIL = true
 ENABLE_USER_DELETE_EMAIL = true
 
