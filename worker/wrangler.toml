@@ -1,0 +1,21 @@
+name = "cloudflare_temp_email"
+main = "src/worker.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = [ "nodejs_compat" ]
+
+routes = [
+  { pattern = "tencentmail.icu", custom_domain = true },
+]
+
+[vars]
+PREFIX = ""
+DOMAINS = ["tencentmail.icu"]
+JWT_SECRET = "8f2a9c4e1b7d3f6a0e5c8b2d4f9a1e3c"
+ADMIN_PASSWORDS = ["admin123456"]
+ENABLE_USER_CREATE_EMAIL = true
+ENABLE_USER_DELETE_EMAIL = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "temp-email-db"
+database_id = "a99d5326-1fa6-49ed-9ea8-b9069a5911b6"
